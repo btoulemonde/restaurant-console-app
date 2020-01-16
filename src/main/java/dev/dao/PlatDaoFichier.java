@@ -16,8 +16,8 @@ public class PlatDaoFichier implements IPlatDao {
 
     private String fichierStockage;
 
-    public PlatDaoFichier(String dossierStockage) {
-        this.fichierStockage = dossierStockage;
+    public PlatDaoFichier(String fichierStockage) {
+        this.fichierStockage = fichierStockage;
         if (!Files.exists(Paths.get(fichierStockage))) {
             try {
                 Files.createFile(Paths.get(fichierStockage));
