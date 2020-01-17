@@ -1,4 +1,4 @@
-package dev.mapper;
+package dev.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

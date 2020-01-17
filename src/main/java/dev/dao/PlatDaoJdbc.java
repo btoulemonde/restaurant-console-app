@@ -8,7 +8,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import dev.entite.Plat;
-import dev.mapper.PlatMapper;
 
 @Repository
 public class PlatDaoJdbc implements IPlatDao{
