@@ -4,9 +4,11 @@ import dev.exception.PlatException;
 import dev.ihm.options.IOptionMenu;
 import dev.ihm.options.OptionAjouterPlat;
 import dev.ihm.options.OptionListerPlats;
+import dev.ihm.options.OptionSupprimer;
 import dev.ihm.options.OptionChercherParId;
 import dev.ihm.options.OptionChercherParNom;
 import dev.ihm.options.OptionTerminer;
+import dev.ihm.options.OptionUpdate;
 import dev.service.IPlatService;
 
 import java.util.HashMap;
@@ -22,11 +24,8 @@ import org.springframework.stereotype.Controller;
 public class Menu {
 
     private Map<Integer, IOptionMenu> actions = new HashMap<>();
-
     
     private String menu;
-    
-    
     private Scanner scanner;
 
     public Menu(Scanner scanner, @Qualifier("platServiceVersion1")IPlatService service) {
@@ -34,6 +33,8 @@ public class Menu {
         actions.put(2, new OptionAjouterPlat(scanner, service));
         actions.put(3, new OptionChercherParId(scanner, service));
         actions.put(4, new OptionChercherParNom(scanner, service));
+        actions.put(5, new OptionUpdate(scanner, service));
+        actions.put(6, new OptionSupprimer(scanner, service));
         actions.put(99, new OptionTerminer());
         this.scanner = scanner;
     }

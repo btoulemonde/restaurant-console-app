@@ -54,4 +54,18 @@ public class PlatServiceVersion1 implements IPlatService {
 		
 		return dao.rechercherParNom(nom);
 	}
+
+	@Override
+	public void mettreAjour(String nom, int id) {
+		dao.update(nom, id);
+	}
+
+	@Override
+	public void delet(int id) {
+		dao.delete(id);
+	}
+	
+	
+	
+	
 }

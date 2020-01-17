@@ -37,6 +37,17 @@ public class PlatDaoDataJpa implements IPlatDao {
 	public Plat rechercherParNom(String nom) {
 		return pRepo.findByNom(nom);
 	}
+
+	@Override
+	public void update(String nom, int id) {
+		pRepo.metAJourNom(nom, id);
+	}
+
+	@Override
+	public void delete(int id) {
+		pRepo.deleteById(id);
+	}
+	
 	
 	
 

@@ -14,4 +14,12 @@ public interface IPlatDao {
     default Plat rechercherParNom(String nom){
     	throw new PlatException("Fonction non implémentée");
     }
+    
+    default void update(String nom, int id){
+    	throw new PlatException("Fonction non implémentée");
+    }
+    
+    default void delete(int id){
+    	throw new PlatException("Fonction non implémentée");
+    }
 }

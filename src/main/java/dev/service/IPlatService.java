@@ -18,4 +18,12 @@ public interface IPlatService {
     default Plat afficherPlatNom (String nom){
     	throw new PlatException("Fonction non implémentée");
     }
+    
+    default void mettreAjour (String nom, int id){
+    	throw new PlatException("Fonction non implémentée");
+    }
+    
+    default void delet ( int id){
+    	throw new PlatException("Fonction non implémentée");
+    }
 }
