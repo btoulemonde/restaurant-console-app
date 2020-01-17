@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import dev.entite.Plat;
 
-@Repository
+
 public class PlatDaoJdbc implements IPlatDao{
 	
 	private JdbcTemplate jdbcTemplate;
