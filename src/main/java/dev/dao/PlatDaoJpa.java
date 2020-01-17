@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 
 import dev.entite.Plat;
 
-@Repository
+//@Repository
 public class PlatDaoJpa implements IPlatDao {
 	
 	@PersistenceContext
@@ -28,9 +28,7 @@ public class PlatDaoJpa implements IPlatDao {
 	@Override
 	@Transactional
 	public void ajouterPlat(String nomPlat, Integer prixPlat) {
-		Plat plat = new Plat();
-		plat.setNom(nomPlat);
-		plat.setPrixEnCentimesEuros(prixPlat);
+		Plat plat = new Plat(nomPlat, prixPlat);
 		em.persist(plat);
 
 	}
