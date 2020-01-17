@@ -8,7 +8,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-@Service
+
 public class PlatServiceVersion2 implements IPlatService {
 
     private IPlatDao dao;
@@ -31,7 +31,7 @@ public class PlatServiceVersion2 implements IPlatService {
             throw new PlatException("un plat doit avoir un nom de plus de 5 caractères");
         }
 
-        if (prixPlat <= 10000) {
+        if (prixPlat <= 1000) {
             throw new PlatException("le prix d'un plat doit être supérieur à 10 €");
         }
 

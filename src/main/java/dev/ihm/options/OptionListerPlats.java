@@ -1,6 +1,9 @@
 package dev.ihm.options;
 
+import org.springframework.stereotype.Component;
+
 import dev.service.IPlatService;
+
 
 public class OptionListerPlats implements IOptionMenu {
 

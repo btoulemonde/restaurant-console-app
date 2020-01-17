@@ -15,12 +15,12 @@ http://www.springframework.org/schema/util/spring-util.xsd">
 	</bean>
 
 
-	<bean id="platDao" class="dev.dao.PlatDaoFichier">
+	<bean id="platDaoFichier" class="dev.dao.PlatDaoFichier">
 		<constructor-arg name="fichierStockage"
 			value="/Users/bapti/Temp/restaurant.txt" />
 	</bean>
 
-	<bean id="platService" class="dev.service.PlatServiceVersion1">
+	<bean id="platServiceVersion1" class="dev.service.PlatServiceVersion1">
 		<constructor-arg name="dao" ref="platDao" />
 	</bean>
 

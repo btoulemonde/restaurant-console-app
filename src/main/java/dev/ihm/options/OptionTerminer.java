@@ -1,6 +1,9 @@
 package dev.ihm.options;
 
+import org.springframework.stereotype.Component;
+
 import dev.exception.PlatException;
+
 
 public class OptionTerminer implements IOptionMenu {
     @Override
