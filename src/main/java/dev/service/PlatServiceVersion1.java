@@ -25,6 +25,12 @@ public class PlatServiceVersion1 implements IPlatService {
     public List<Plat> listerPlats() {
         return dao.listerPlats();
     }
+    
+    @Override
+    public Plat afficherPlatId(int id){
+    	return dao.rechercherParId(id);
+    }
+    
 
     @Override
     public void ajouterPlat(String nomPlat, Integer prixPlat) {
@@ -42,4 +48,10 @@ public class PlatServiceVersion1 implements IPlatService {
         // persistance uniquement si les règles métiers sont respectées
         dao.ajouterPlat(nomPlat, prixPlat);
     }
+
+	@Override
+	public Plat afficherPlatNom(String nom) {
+		
+		return dao.rechercherParNom(nom);
+	}
 }

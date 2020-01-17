@@ -4,6 +4,8 @@ import dev.exception.PlatException;
 import dev.ihm.options.IOptionMenu;
 import dev.ihm.options.OptionAjouterPlat;
 import dev.ihm.options.OptionListerPlats;
+import dev.ihm.options.OptionChercherParId;
+import dev.ihm.options.OptionChercherParNom;
 import dev.ihm.options.OptionTerminer;
 import dev.service.IPlatService;
 
@@ -30,6 +32,8 @@ public class Menu {
     public Menu(Scanner scanner, @Qualifier("platServiceVersion1")IPlatService service) {
         actions.put(1, new OptionListerPlats(service));
         actions.put(2, new OptionAjouterPlat(scanner, service));
+        actions.put(3, new OptionChercherParId(scanner, service));
+        actions.put(4, new OptionChercherParNom(scanner, service));
         actions.put(99, new OptionTerminer());
         this.scanner = scanner;
     }

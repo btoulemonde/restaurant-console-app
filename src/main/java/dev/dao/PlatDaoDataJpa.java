@@ -28,4 +28,20 @@ public class PlatDaoDataJpa implements IPlatDao {
 
 	}
 
+	@Override
+	public Plat rechercherParId(int id) {
+		return pRepo.findById(id);
+	}
+
+	@Override
+	public Plat rechercherParNom(String nom) {
+		return pRepo.findByNom(nom);
+	}
+	
+	
+
+	
+	
+	
+
 }
