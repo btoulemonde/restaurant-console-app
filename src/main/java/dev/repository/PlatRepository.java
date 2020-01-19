@@ -10,7 +10,6 @@ import dev.entite.Plat;
 
 public interface PlatRepository extends JpaRepository<Plat, Integer> {
 
-	public Plat findById(int ID);
 
 	public Plat findByNom(String NomPlat);
 

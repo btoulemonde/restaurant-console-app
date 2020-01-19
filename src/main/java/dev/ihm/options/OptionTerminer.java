@@ -14,5 +14,6 @@ public class OptionTerminer implements IOptionMenu {
     @Override
     public void executer() {
         throw new PlatException("Au revoir");
+        
     }
 }

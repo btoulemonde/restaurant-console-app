@@ -30,7 +30,7 @@ public class PlatDaoDataJpa implements IPlatDao {
 
 	@Override
 	public Plat rechercherParId(int id) {
-		return pRepo.findById(id);
+		return pRepo.findById(id).get();
 	}
 
 	@Override
